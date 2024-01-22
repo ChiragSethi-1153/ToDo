@@ -1,17 +1,21 @@
-import React from 'react'
+import React, { useState } from "react";
+import "../App.css";
 
-function Filter() {
+function Filter(props) {
   return (
-    <div>
-      
-        <button type="button" className="btn toggle-btn" aria-pressed="true">
-          <span className="visually-hidden">Show </span>
-          <span>all</span>
-          <span className="visually-hidden"> tasks</span>
+    <>
+      <div className="filter-btns">
+        <button
+          type="button"
+          className="filter-btn"
+          aria-pressed={props.isPressed}
+          onClick={() => props.setFilter(props.name)}
+        >      
+         <span>{props.name}</span> 
         </button>
-       
-    </div>
-  )
+      </div>
+    </>
+  );
 }
 
-export default Filter
+export default Filter;

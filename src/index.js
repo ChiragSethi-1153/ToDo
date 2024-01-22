@@ -3,15 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { useState, useEffect } from 'react';
+
 
 
 const data = [
-  { id: "todo-0", name: "Eat", completed: true },
-  { id: "todo-1", name: "Sleep", completed: false },
-  { id: "todo-2", name: "Code", completed: false },
-  { id: "todo-3", name: "Repeat", completed: false },
+  {id:"todo", name:"eat"},
+  {id:"todo-1", name:"sleep"}
+];
 
-]
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
